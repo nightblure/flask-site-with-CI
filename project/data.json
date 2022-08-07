@@ -33,5 +33,12 @@
         "email": "arcu.et@google.com",
         "name": "Elaine Mueller",
         "phone": "(301) 286-3279"
+    },
+    {
+        "id": 6,
+        "name": "\u0411\u0435\u043b\u044f\u0435\u0432 \u0418\u0432\u0430\u043d \u041d\u0438\u043a\u043e\u043b\u0430\u0435\u0432\u0438\u0447",
+        "phone": "+79963236813",
+        "email": "vanobel159@gmail.com",
+        "address": "\u041b\u0438\u043f\u043e\u0432\u0430\u044f \u0420\u043e\u0449\u0430 \u0414.4"
     }
 ]
