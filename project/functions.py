@@ -1,6 +1,23 @@
 import json
 
 
+def get_new_item_id():
+    data = get_data()
+    max_id = -1
+    for data_item in data:
+        if max_id < data_item['id']:
+            max_id = data_item['id']
+    return max_id + 1
+
+
+def get_item_index_by_id(id):
+    data = get_data()
+
+    for index, data_item in enumerate(data):
+        if data_item['id'] == id:
+            return index
+
+
 def get_data():
     with open('data.json', encoding='utf8') as file:
         data = file.read()
