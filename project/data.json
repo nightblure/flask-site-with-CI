@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1,
+        "address": "446-4861 Mi Roads",
+        "email": "sem.vitae.aliquam@icloud.edu",
+        "name": "Davis Pittman",
+        "phone": "1-297-661-5421"
+    },
+    {
+        "id": 2,
+        "address": "446-4861 Mi Roads",
+        "email": "sem.vitae.aliquam@icloud.edu",
+        "name": "Davis Pittman",
+        "phone": "1-297-661-5421"
+    },
+    {
+        "id": 3,
+        "address": "5853 Id Avenue",
+        "email": "curabitur.sed.tortor@aol.org",
+        "name": "Hasad Goff",
+        "phone": "(797) 425-7366"
+    },
+    {
+        "id": 4,
+        "address": "6048 Elit. Rd.",
+        "email": "egestas.sed@outlook.couk",
+        "name": "Wendy Hallds",
+        "phone": "(713) 601-1397"
+    },
+    {
+        "id": 5,
+        "address": "671 Non Street",
+        "email": "arcu.et@google.com",
+        "name": "Elaine Mueller",
+        "phone": "(301) 286-3279"
+    }
+]
