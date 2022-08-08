@@ -38,7 +38,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="C:\Users\nightblure\Desktop\dev\flask-site-ci-cd\venv"
+VIRTUAL_ENV="C:\Users\nightblure\Desktop\dev\flask-site-with-CI\venv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
