@@ -8,11 +8,11 @@
 </head>
 <body>
 
-<a class="nav-link active" href="/">Home</a>
+<a class="nav-link active" href="/home">Home</a>
 
 <h1>Edit info for {{ data_item.name }} </h1>
 
-<form action="action/{{ data_item.id }}" method="post" name="edit" enctype="multipart/form-data">
+<form action="/edit/action/{{ data_item.id }}" method="post" name="edit" enctype="multipart/form-data">
 
     <label class="form-label">Name</label>
     <div class="input-group mb-3">

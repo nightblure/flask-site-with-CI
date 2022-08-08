@@ -1,5 +1,4 @@
 import os
-import sys
 from flask import Flask, render_template, redirect, request
 from functions import get_data, save_data, get_new_item_id
 from functions import get_data_item_by_id, get_item_index_by_id
@@ -14,10 +13,10 @@ app = Flask(__name__)
 app.config.from_object(__name__)
 
 
-@app.route("/")
+@app.route("/home")
 def index():
     data = get_data()
-    return render_template('index.html', data=data)
+    return render_template('home.html', data=data)
 
 
 @app.route("/new_item")
@@ -27,7 +26,6 @@ def create_new_item():
 
 @app.route("/create_new", methods=['POST'])
 def create():
-
     data = get_data()
 
     data_item = {
@@ -41,7 +39,7 @@ def create():
     data = list(data)
     data.append(data_item)
     save_data(data)
-    return redirect('/')
+    return redirect('/home')
 
 
 @app.route('/edit/<int:id>', methods=['GET'])
@@ -52,14 +50,12 @@ def edit(id):
 
 @app.route('/edit/action/<int:id>', methods=['POST'])
 def save(id):
-
     data = get_data()
     index = get_item_index_by_id(id)
 
     if request.form['form_btn'] == 'save':
-        name = request.form.get('name')
         data_item = get_data_item_by_id(id)
-        data_item['name'] = name
+        data_item['name'] = request.form.get('name')
         data_item['phone'] = request.form.get('phone')
         data_item['email'] = request.form.get('email')
         data_item['address'] = request.form.get('address')
@@ -70,11 +66,8 @@ def save(id):
         del data[index]
         save_data(data)
 
-    return redirect('/')
+    return redirect('/home')
 
 
 if __name__ == "__main__":
-    if len(sys.argv) > 1 and sys.argv[1] == "build":
-        pass
-    else:
-        app.run(host='127.0.0.1', port=8000, debug=True)
+    app.run(host='127.0.0.1', port=8000, debug=True)
